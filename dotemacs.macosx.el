@@ -11,8 +11,8 @@
 ;; If there is more than one, they won't work right.
 '(default ((t (:family "Monaco" :foundry "unknown" :slant normal :weight normal :height 140 :width normal)))))
 
-(setq url-proxy-services '(("no_proxy" . "192.168.122.*")
-                           ("http" . "192.168.122.20:3128")))
+;;(setq url-proxy-services '(("no_proxy" . "192.168.122.*")
+;;                           ("http" . "192.168.122.20:3128")))
 
 ;;marmalde package server
 (require 'package)
@@ -34,3 +34,11 @@
                                     (background-color . "Black")
                                     (cursor-color . "SkyBlue")
 )))
+
+;;emms
+(setq exec-path (append exec-path '("/opt/local/bin")))
+(add-to-list 'load-path "/Users/maxj/dev/sources/gnu/emms/lisp")
+(require 'emms-setup)
+(require 'emms-player-mplayer)
+(emms-standard)
+(emms-default-players)
